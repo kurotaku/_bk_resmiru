@@ -20,8 +20,4 @@ ApplicationRecord.transaction do
   test_shop = Shop.new(email: 'test@test.com', password: 'password')
   test_shop.skip_confirmation!
   test_shop.save!
-
-  test_shop = User.new(phone: '0900000000', email: 'test@test.com', password: 'password')
-  test_shop.skip_confirmation!
-  test_shop.save!
 end

@@ -1,0 +1,21 @@
+<header class="main-header d-flex">
+  <div class="ml-auto d-flex">
+    <%= image_tag current_user.decorate.thumbnail, class: 'header-icon', id: 'userIcon' %>
+
+    <nav id="userMenu" class="header-menu">
+      <ul>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: 'delete' %></li>
+      </ul>
+    </nav>
+    <div id="userMenuBg" class="header-menu-bg"></div>
+
+  </div>
+</header>
+
+<nav class="main-menu">
+  <ul class="main-menu-list">
+    <li class="<%= 'current' if controller_path == 'dashboards' %>"><%= link_to 'ダッシュボード', root_path %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: 'delete' %></li>
+  </ul>
+</nav><!-- .main-menu -->
+
