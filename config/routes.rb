@@ -5,5 +5,10 @@ Rails.application.routes.draw do
     sessions:      "users/sessions",
   }
 
+  devise_for :shops, controllers: {
+    registrations: "shops/registrations",
+    sessions:      "shops/sessions",
+  }
+
   root "static_pages#home"
 end
